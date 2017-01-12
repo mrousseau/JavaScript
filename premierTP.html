@@ -1,0 +1,90 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+
+        <script>
+            console.log("Log OK");
+            //Map
+            console.log("MAP");
+            var a = [1,2,3,4];
+            var b = a.map(function(item){
+                return item *2;
+            });
+            console.log(b);
+            //ForEach
+            console.log("ForEach");
+            b.forEach(function(item){
+                console.log(item);
+            });
+
+            console.log(a, b);
+
+
+            //Filter    
+            console.log("Filter");
+            var c = ["asticot", "voiture", "a", "A"];
+
+
+            var d = c.filter(function(item){
+                return item[0] === "a"; 
+            });
+
+            console.log(c, d);
+
+
+            //Reduce
+            console.log("Reduce");
+            var array = [1,2,3,4];
+
+             var result = array.reduce(function(accu, item,index, array){
+                return accu + item; 
+            },0);
+            
+            console.log(result);
+
+            var nom = ['thomas', 'alphonse', 'nicolas'];
+
+            var reslt = nom.reduce(function(accu, item){
+                    //return accu + item + (((nom.length -1) == index) ? '. ': ' ,');
+            return (accu) ? accu + item + ',' : accu + item +'.';
+            },'');
+
+
+            console.log(reslt);
+
+            var o = {x: 42, a: 12};
+
+            console.log(o);
+            console.log(o.x);
+            for( p in o ){
+                console.log(p);
+            }
+
+            function f(){
+                console.log('ici');
+            }
+
+            // créer  promiseTimeout
+            function promiseTimeout (time) {
+              
+              var executor = function(resolve){
+                  setTimeout(resolve(), time);
+              }
+
+
+              return new Promise(executor);
+            };
+
+
+            setTimeout(f, 1000);
+
+            var p = promiseTimeout(1000);
+
+            p.then(f);
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "name": "Margharita",
+            "toppings" : ["tomates", "mozzarella", "huile", "origan"]
+        },
+        {
+            "id": 2,
+            "name": "Oriental",
+            "toppings" : ["poivron vert", "poivron rouge", "oignon", "steak haché", "oeuf", "tomates"]
+        },
+        {
+            "id": 3,
+            "name": "Quattro fromagi",
+            "toppings" : ["crème fraîche épaisse", "roquefort", "chèvre", "mozzarella", "parmesan"]
+        }
+    ]
+}

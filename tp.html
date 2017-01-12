@@ -1,0 +1,78 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <script>
+       /*     var pizza1 = {
+                id : 1,
+                name : "margharita", 
+                toppings: ["mushrooms", "tomatos", "ham"],
+                status : ready / not
+            }
+
+            var pizza2 = {
+                id : 2,
+                name : "regina",
+                toppins : [""],
+                status : ready / not
+
+            }
+            //mushrooms: champignons
+
+            //margharita, regina, reginan regina, margharita
+*/
+
+        var recipe = ['a','b','c'];
+
+        var pizza = ['c','b','a', 'd'];
+
+        console.log("Pizza : " + pizza.length + " Recipe : " + recipe.length);
+        console.log( "sont égaux :" + isOK(pizza, recipe));
+        
+        function isOK(pizza, recipe){
+            /*var retour = pizza.filter(function (item){
+                return item === recipe.forEach(function(i){
+                    return i; 
+                });
+            });
+            return retour != 0; */
+            var a = false; 
+            if (pizza.lenth = recipe.lenth){
+                a = true; 
+            }else {
+                a = false; 
+            }
+            return a; 
+        };
+
+        /*
+           return  pizza.filter(function(item){
+                    return item === recipe.forEach(function(i){
+                            return i;
+                        });
+                    });
+        */
+
+
+            var value = 3; 
+            var v = 3; 
+            var result;
+            console.log( value + " " + v +" " + result);
+            if (value == v){
+                result = true; 
+            } else {
+                result = false;
+            }
+            console.log(result);
+            const square = num => num * num;
+            console.log(square(2));
+
+
+
+            const array = ['un', 'deux', 'trois'];
+            let [uno, , tres] = array;
+            console.log(uno + " " + tres);
+        </script>
+    </body>
+</html>
