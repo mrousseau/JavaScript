@@ -3,17 +3,17 @@
         {
             "id": 1,
             "name": "Margharita",
-            "toppings" : ["tomates", "mozzarella", "huile", "origan"]
+            "toppings": ["tomato", "ham", "fromaggio"]
         },
         {
             "id": 2,
-            "name": "Oriental",
-            "toppings" : ["poivron vert", "poivron rouge", "oignon", "steak haché", "oeuf", "tomates"]
+            "name": "Regina",
+            "toppings": ["tomato", "mushrooms"]
         },
         {
             "id": 3,
             "name": "Quattro fromagi",
-            "toppings" : ["crème fraîche épaisse", "roquefort", "chèvre", "mozzarella", "parmesan"]
+            "toppings": ["parmeggiano", "cheese1", "cheeese 2"]
         }
     ]
 }
