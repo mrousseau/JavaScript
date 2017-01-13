@@ -1,6 +1,7 @@
 # JavaScript Advance
 
 @author : Mathieu ROUSSEAU
+
 @email  : mr.rousseaumathieu@gmail.com
 
 ##Description
