@@ -1,0 +1,33 @@
+body {
+    background-color: #D8D8D8;
+}
+
+
+.plateauPizza{
+    width: 400px;
+    height: 200px;
+    background-color: #B45F04;
+    position: absolute; 
+    z-index: 1;
+}
+
+.pate{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #F5DA81;
+    position: absolute; 
+    z-index: 2;
+    margin-left: 100px; 
+    }
+
+.tomate{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute; 
+    z-index: 3;
+    margin-left: 105px; 
+    margin-top: 5px; 
+}

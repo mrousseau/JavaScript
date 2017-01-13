@@ -1,5 +1,7 @@
+import _ from 'lodash';
+
 export class RecipesService {
-    constructor(){
+    constructor() {
         this.recipes = null;
     }
 
@@ -43,6 +45,18 @@ export class RecipesService {
         return this.getRecipes()
         .then(recipes => recipes.map(recipe => recipe.name))
         .catch(this.handleError)
+    }
+
+    getToppings() {
+        return this.getRecipes()
+        .then(recipes => 
+            _(recipes.map(recipe => recipe.toppings))
+                .flatten()
+                .uniq()
+                .value()
+        )
+        .catch(this.handleError)
+        
     }
 
     queryRecipes(query) {

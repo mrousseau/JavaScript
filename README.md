@@ -72,3 +72,13 @@ npm install webpack babel-loader babel-core babel-preset-es2015 --save-dev
 
 > npm run start (pour tous dém) + npm run api (pour le service json)
 
+##jasmine 
+
+> npm i jasmine --save-dev
+
+##Karma 
+### Install Karma:
+$ npm install karma --save-dev
+
+### Install plugins that your project needs:
+$ npm install karma-jasmine karma-chrome-launcher --save-dev
