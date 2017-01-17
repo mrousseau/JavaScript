@@ -15,6 +15,7 @@ angular.module('app', [])
         this.predicat = 'name';
         this.reverse = false;
 
+        this.newUser = { name: '', age: 18 };
     }
 
     sort(predicat) {
@@ -24,14 +25,12 @@ angular.module('app', [])
         this.predicat = predicat;
     }
 
-    save (form, user) {
+    addUser(form, user) {
         if (form.$invalid) return;
 
-
-        let tempo = angular.copy(user);
-       
-        this.users.push(tempo);
-
+        let temp = angular.copy(user);
+        this.users.push(temp);
+        user.name = '';
     }
 })
 

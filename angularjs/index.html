@@ -43,15 +43,19 @@
             <input ng-model="ctrl.predicat" class="form-control">
 <!--            ng-model="ctrl.predicat"-->
 
+            <br>
+            <br>
 
 
-
-            <form name="myForm" novalidate ng-submit="ctrl.save(myForm, user)">
+            <form name="myForm" novalidate ng-submit="ctrl.save(myForm, user)" class='well'>
+                <div class='form-group'>
                 <p><label for="name">Name : </label><input id="name" name="name" ng-model="user.name"></p>
                 <p><label for="email">Age : </label><input id="age" name="age" ng-model="user.age"></p>
                 <button type="submit">Ok</button>
+                </div>
             </form> 
 
+            <pre>myForm.myName.$error = {{ myForm.myName.$error | json }}</pre>
         </div>
 
     </div>
