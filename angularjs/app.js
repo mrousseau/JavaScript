@@ -25,16 +25,11 @@ angular.module('app', [])
     }
 
     save (form, user) {
-        if (user.age !== ''){
-            console.log('ok')
-        }
+        if (form.$invalid) return;
 
 
-        let tempo = {};
-
-        tempo.name =  user.name;
-        tempo.age = user.age;
-        
+        let tempo = angular.copy(user);
+       
         this.users.push(tempo);
 
     }
