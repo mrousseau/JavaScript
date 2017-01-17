@@ -24,6 +24,16 @@
       "name": "mathieu",
       "age": 31,
       "id": 5
+    },
+    {
+      "name": "mojo2",
+      "age": 32,
+      "id": 6
+    },
+    {
+      "name": "zelda",
+      "age": 26,
+      "id": 7
     }
   ]
 }
