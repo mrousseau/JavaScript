@@ -17,7 +17,10 @@
     
     <div class="container">
 
+
         <div ng-controller="MyFirstController as ctrl">
+
+        <h2>PizzaYolo <small>{{ ctrl.version }}</small></h2>
 
             <input type="search" ng-model="query" class="form-control">
 
@@ -68,8 +71,6 @@
                 </div>
                 <button type="submit" class="btn">Ajouter cet utilisateur</button>
             </form>
-
-            <pre>{{ userForm.name | json }}</pre>
 
         </div>
 

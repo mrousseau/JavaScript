@@ -1,11 +1,13 @@
 export class MyFirstController {
-    constructor() {
-        this.users = [
-            { name: 'un', age: 10 },
-            { name: 'deux', age: 20 },
-            { name: 'trois', age: 33 },
-            { name: 'quatre', age: 42 },
-        ];
+    constructor (SuperService, Version) {
+
+        this.version = Version;
+
+        SuperService.getUsers()
+            .then(users => {
+                this.users = users;
+            });
+
         this.predicat = 'name';
         this.reverse = false;
 
