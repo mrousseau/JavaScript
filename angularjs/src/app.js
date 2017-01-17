@@ -3,14 +3,14 @@ import angular from 'angular';
 import { ExclamationFilter } from './exclamation.filter';
 import { EldestFilter } from './eldest.filter';
 import { MyFirstController } from './my-first.controller';
-import { SuperService } from './super.service';
+import { UserService } from './user.service';
 
 angular.module('app', [])
 
 .controller('MyFirstController', MyFirstController)
 .filter('exclamation', ExclamationFilter)
 .filter('eldest', EldestFilter)
-.service('SuperService', SuperService)
+.service('usersService', UserService)
 
 .value('Version', '1.0.0')
 
