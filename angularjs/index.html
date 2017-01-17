@@ -10,6 +10,7 @@
         body { margin: 3em; }
         .down:after { content: '↓' }
         .up:after { content: '↑' }
+        form.invalid { border-color: red; }
     </style>
 </head>
 <body ng-app="app">
@@ -17,7 +18,8 @@
     <div class="container">
 
         <div ng-controller="MyFirstController as ctrl">
- 
+
+
 
             <input type="search" ng-model="query" class="form-control">
 
@@ -36,26 +38,41 @@
                         <td>{{ user.age }}</td>
                     </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">
+                            Le doyen : {{ ctrl.users | eldest }}
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
 
-            <strong>Le doyen : {{ ctrl.users | eldest }}</strong>
-
-            <input ng-model="ctrl.predicat" class="form-control">
-<!--            ng-model="ctrl.predicat"-->
-
-            <br>
-            <br>
-
-
-            <form name="myForm" novalidate ng-submit="ctrl.save(myForm, user)" class='well'>
-                <div class='form-group'>
-                <p><label for="name">Name : </label><input id="name" name="name" ng-model="user.name"></p>
-                <p><label for="email">Age : </label><input id="age" name="age" ng-model="user.age"></p>
-                <button type="submit">Ok</button>
+            <form ng-class="{ invalid: userForm.$invalid && userForm.$dirty }" name="userForm" novalidate ng-submit="ctrl.addUser(userForm, ctrl.newUser)" class="well">
+                <h4>Nouvel utilisateur</h4>
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input ng-model="ctrl.newUser.name" 
+                        name="name" 
+                        required
+                        ng-maxlength="4"
+                        id="name" type="text" class="form-control">
+                    <p class="text-danger" 
+                        ng-if="userForm.name.$error.required && userForm.name.$dirty">Obligatoire</p>
+                    <p class="text-danger" 
+                        ng-if="userForm.name.$error.maxlength && userForm.name.$dirty">Trop long</p>
                 </div>
-            </form> 
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input 
+                        ng-model="ctrl.newUser.age"
+                        name="age" 
+                        id="age" type="number" class="form-control">
+                </div>
+                <button type="submit" class="btn">Ajouter cet utilisateur</button>
+            </form>
 
-            <pre>myForm.myName.$error = {{ myForm.myName.$error | json }}</pre>
+            <pre>{{ userForm.name | json }}</pre>
+
         </div>
 
     </div>
