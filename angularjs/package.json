@@ -1,0 +1,15 @@
+{
+  "name": "dtang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "aliv -p 8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aliv": "^1.4.1",
+    "serve": "^2.4.1"
+  }
+}
