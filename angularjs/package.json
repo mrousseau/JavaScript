@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base public --hot --inline",
+    "start": "webpack-dev-server --content-base public --hot --inline --history-api-fallback",
     "api": "json-server data.json"
   },
   "author": "",
@@ -21,10 +21,12 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
     "karma-webpack": "^2.0.1",
+    "raw-loader": "^0.5.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "angular": "^1.6.1"
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1"
   }
 }

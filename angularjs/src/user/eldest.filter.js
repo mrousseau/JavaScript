@@ -1,6 +1,6 @@
 export function EldestFilter () {
     return (users) => {
-        if (!users instanceof Array || !users) return '';
+        if (!users instanceof Array || !users || !users.length) return '';
 
         let max = users[0];
         users.forEach((user) => {
