@@ -1,9 +1,8 @@
 const api = 'http://localhost:3000/users';
 
 export class UserService {
-    constructor($http, $timeout, $q) {
+    constructor($http, $q) {
         this.$http = $http;
-        this.$timeout = $timeout;
         this.$q = $q;
     }
 
@@ -35,8 +34,7 @@ export class UserService {
     }
 
     deleteUser(user) {
-        return this.$timeout(3000)
-            .then(() => this.$http.delete(`${ api }/${ user.id }`))
+        return this.$http.delete(`${ api }/${ user.id }`)
             .then(response =>  response.data);
     }
 }

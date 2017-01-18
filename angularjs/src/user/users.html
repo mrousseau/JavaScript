@@ -15,13 +15,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="user in ctrl.users | filter:query | orderBy:ctrl.predicat:ctrl.reverse track by $index">
+            <tr ng-class="{ delete: user.delete }"
+                ng-repeat="user in ctrl.users | filter:query | orderBy:ctrl.predicat:ctrl.reverse track by $index">
                 <td>{{ user.name }}</td>
                 <td>{{ user.age }}</td>
-                <td style="text-align:right">
+                <td style="text-align:right" ng-if="!user.delete">
                     <a ng-href="/user/{{ user.id }}" class="btn btn-default">Editer</a>
-                    <button ng-disabled="user.deleted"
-                        ng-click="ctrl.deleteUser(user)" class="btn btn-default">Supprimer</button>
+                    <button ng-click="ctrl.deleteUser(user)" class="btn btn-default">Supprimer</button>
+                </td>
+                <td style="text-align:right" ng-if="user.delete">
+                    <button ng-click="ctrl.cancelDelete(user)" type="button" class="btn btn-default">Annuler</button>
                 </td>
             </tr>
         </tbody>

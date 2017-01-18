@@ -11,5 +11,4 @@ export class UserController {
         this.UserService.saveUser(user)
             .then(() => this.$location.path('/users'));
     }
-
 }
